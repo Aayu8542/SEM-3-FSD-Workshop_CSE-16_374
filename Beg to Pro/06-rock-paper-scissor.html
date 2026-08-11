@@ -13,7 +13,7 @@
   <button onclick="playGame('paper')">Paper</button>
   <button onclick="playGame('scissor')">Scissor</button>
   <!-- const randomNum=Math.random();//randomNum is alredy define so we can use it by scope the -->
-   
+
 
 
   <script>
@@ -31,6 +31,7 @@
         else if (computerMove === 'scissor') {
           result = 'Tie';
         }
+
         else if (playerMove === 'paper') {
           const computerMove = pickcomputerMove();
           let result = '';
@@ -44,6 +45,7 @@
             result = 'Loose';
           }
         }
+
         else {
           const computerMove = pickcomputerMove();
           let result = '';
@@ -58,6 +60,7 @@
           }
         }
       }
+      
       alert(`You choose ${playerMove}. Computer choose ${computerMove}. Result ${result}`)
     }
     function pickcomputerMove() {
