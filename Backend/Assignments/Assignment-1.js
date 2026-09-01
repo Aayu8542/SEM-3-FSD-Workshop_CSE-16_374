@@ -1,32 +1,28 @@
-import fs from 'node:fs/promises';
+import fs from "node:fs";
 const filepath = "data.jason";
-async function createfile (content){
-  try{
- await fs.writeFile(filepath, content, "utf8");
- console.log("File created successfully");
-} catch (err) {
-  console.error("Error creating file:", err);
+
+function createFile() {
+    fs.writeFile(filepath, "Hello, World!", (err) => {
+        if (err) {
+            console.error("Error creating file:", err);
+        } else {
+            console.log("File created successfully.");
+        }
+    });
 }
-async function readfile (){
-  try {
-    const data = await fs.readFile(filepath, "utf8");
-    console.log("File content:", data);
-    return data;
-  } catch (err) {
-    console.error("Error reading file:", err);
-  }
+function readFile() {
+    node.fs.readFile(filepath, "utf8", (err, data) => {
+        if (err) {
+            console.error("Error reading file:", err);
+        } else {
+            console.log("File contents:", data);
+        }
+    });
 }
+function updateFile() {
 }
-function uploadfile (){
-  
-}
-function deletefile (){
-  
+function deleteFile() {
 }
 
 
-createfile("Hello, this is a sample file content.");
-await readfile();
-
-
-
+createFile("hello");
