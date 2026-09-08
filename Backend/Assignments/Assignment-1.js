@@ -26,3 +26,7 @@ function deleteFile() {
 
 
 createFile("hello");
+
+
+//assignmet 2 make get push add delete
+//assignmet 3 changes in the data
